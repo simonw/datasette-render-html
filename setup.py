@@ -24,7 +24,5 @@ setup(
     py_modules=["datasette_render_html"],
     entry_points={"datasette": ["render_html = datasette_render_html"]},
     install_requires=["datasette"],
-    extras_require={
-        "test": ["pytest"]
-    },
+    extras_require={"test": ["pytest"]},
 )
