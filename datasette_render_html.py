@@ -10,4 +10,4 @@ def render_cell(value, column, table, database, datasette):
     if not config:
         return None
     if column in config["columns"]:
-        return jinja2.Markup(value)
+        return jinja2.Markup(value or "")

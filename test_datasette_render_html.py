@@ -34,3 +34,9 @@ def test_marks_configured_column_safe(configured_datasette):
     assert Markup("a<b") == render_cell(
         "a<b", "definition", "glossary", "docs", configured_datasette
     )
+
+
+def test_none_becomes_blank_string(configured_datasette):
+    assert Markup("") == render_cell(
+        None, "definition", "glossary", "docs", configured_datasette
+    )
