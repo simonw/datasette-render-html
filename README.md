@@ -26,6 +26,18 @@ If you have a database called `docs.db` containing a `glossary` table and you wa
         }
     }
 
+## Installation
+
+Install this plugin in the same environment as Datasette.
+
+    $ pip install datasette-render-html
+
+## Usage
+
+With the plugin installed, launch Datasette with the above `metadata.json` configuration:
+
+    $ datasette serve --metadata=metadata.json docs.db
+
 ## Security
 
 This plugin allows HTML to be rendered exactly as it is stored in the database. As such, you should be sure only to use this against columns with content that you trust - otherwise you could open yourself up to an [XSS attack](https://owasp.org/www-community/attacks/xss/).
