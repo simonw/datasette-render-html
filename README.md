@@ -30,13 +30,13 @@ If you have a database called `docs.db` containing a `glossary` table and you wa
 
 Install this plugin in the same environment as Datasette.
 
-    $ pip install datasette-render-html
+    $ datasette install datasette-render-html
 
 ## Usage
 
 With the plugin installed, launch Datasette with the above `metadata.json` configuration:
 
-    $ datasette serve --metadata=metadata.json docs.db
+    $ datasette -m metadata.json docs.db
 
 ## Security
 
