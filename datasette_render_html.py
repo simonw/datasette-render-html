@@ -1,5 +1,5 @@
 from datasette import hookimpl
-import jinja2
+import markupsafe
 
 
 @hookimpl
@@ -10,4 +10,4 @@ def render_cell(value, column, table, database, datasette):
     if not config:
         return None
     if column in config["columns"]:
-        return jinja2.Markup(value or "")
+        return markupsafe.Markup(value or "")
